@@ -72,9 +72,10 @@ REST_FRAMEWORK = {
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 ACCOUNT_EMAIL_VERIFICATION = "none"
 
-CSRF_TRUSTED_ORIGINS = ['http://localhost:5173', "http://localhost:3000",]
-CORS_ALLOWED_ORIGINS = ['http://localhost:5173',"http://localhost:3000"]
+CSRF_TRUSTED_ORIGINS = ['http://localhost:5173', "http://localhost:3000","*"]
+CORS_ALLOWED_ORIGINS = ['http://localhost:5173',"http://localhost:3000","*"]
 CORS_ALLOW_CREDENTIALS = True
+ALLOWED_HOSTS = ['*']
 
 CSRF_COOKIE_HTTPONLY = False
 SESSION_COOKIE_SAMESITE = "Lax"
